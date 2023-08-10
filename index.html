@@ -40,9 +40,19 @@
           <div class="headset-band headset-band-1"></div>
           <div class="headset headset-1"></div>
         </div>
-        <audio controls autoplay style="margin-top: 450px;">
+        <audio id="myAudio" controls autoplay>
           <source src="wannabe.mp3" type="audio/mpeg">
         </audio>
       </article>
 </body>
 </html>
+
+<script>
+  // Lấy thẻ audio bằng ID
+  var audio = document.getElementById("myAudio");
+
+  // Tự động phát khi tải xong trang
+  window.addEventListener("load", function() {
+    audio.play();
+  });
+</script>
